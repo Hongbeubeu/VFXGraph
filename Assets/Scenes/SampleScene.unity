@@ -416,6 +416,7 @@ GameObject:
   - component: {fileID: 1313591750}
   - component: {fileID: 1313591752}
   - component: {fileID: 1313591751}
+  - component: {fileID: 1313591753}
   m_Layer: 0
   m_Name: Slash_VFX
   m_TagString: Untagged
@@ -487,8 +488,8 @@ VisualEffect:
   m_GameObject: {fileID: 1313591749}
   m_Enabled: 1
   m_Asset: {fileID: 8926484042661614526, guid: 284f85a837c70a643903b6f04d5a9a47, type: 3}
-  m_InitialEventName: OnPlay
-  m_InitialEventNameOverriden: 0
+  m_InitialEventName: 
+  m_InitialEventNameOverriden: 1
   m_StartSeed: 0
   m_ResetSeedOnPlay: 1
   m_ResourceVersion: 1
@@ -507,8 +508,11 @@ VisualEffect:
       - m_Value: {x: 0.8396226, y: 0.7643734, z: 0.7643734, w: 0}
         m_Name: New Color
         m_Overridden: 1
-      - m_Value: {x: 0, y: 3.634656, z: 8.189918, w: 1}
+      - m_Value: {x: 2.520743, y: 9.712969, z: 10.082972, w: 1}
         m_Name: BrightColor
+        m_Overridden: 1
+      - m_Value: {x: 0, y: 0, z: 0, w: 10}
+        m_Name: DarkColor
         m_Overridden: 1
     m_Uint:
       m_Array: []
@@ -524,6 +528,21 @@ VisualEffect:
       m_Array: []
     m_Bool:
       m_Array: []
+--- !u!114 &1313591753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313591749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdafc37f32b176349b1684c4455b98e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ExecuteInEditor: 1
+  m_Bindings: []
+  m_VisualEffect: {fileID: 1313591752}
 --- !u!1 &1603494414
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,9 +589,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vfx: {fileID: 1313591752}
-  color:
-    serializedVersion: 2
-    rgba: 4280953599
+  brightColor: {r: 4, g: 0.59607846, b: 0.59607846, a: 0}
+  darkColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &1665306490
 GameObject:
   m_ObjectHideFlags: 0
